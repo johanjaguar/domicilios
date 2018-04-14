@@ -10,20 +10,19 @@ class ProfilePhoto extends React.Component {
 			}
 	} 
 	getUserImg = ( img ) => {
-		if( img === "" ) {
-			img = this.state.photo
+		if( img.length === 0 ) {
+			img = this.state.url
 		}
-		
 		return img
-	}
-
+	} 
+  
 	componentWillMount() {
 		this.setState({
-			url: this.getUserImg(this.props.photo),
-			alt: this.props.alt
+			url: this.getUserImg( this.props.photo ), 
+			alt: "Fotografia de " + this.props.alt
 		})
 	}
-	render() {
+	render() { 
 		return ( 
 			<div className="photo">
 				<img src={this.state.url} alt={this.state.alt} /> 

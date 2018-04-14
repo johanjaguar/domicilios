@@ -6,9 +6,9 @@ class App extends React.Component {
 		super(props)
 			this.state = {
 				posts: [],
-				error: undefined 
+				error: undefined  
 			}
-	} 
+	}
  
 	componentWillMount() {
     fetch('http://www.mocky.io/v2/5a663e0d2e0000002b323e0e')
@@ -21,7 +21,7 @@ class App extends React.Component {
 					posts: data,
 					error: ""
 				})
-      })
+      }) 
   }
 
 	render() {
@@ -34,17 +34,17 @@ class App extends React.Component {
           {this.state.posts.map((post, index) =>
  						<Post 
  							username={post.user.name} 
- 							date={new Date(post.date)}
+ 							date={post.date} 
  							text={post.text}
  							photo={post.user.image}
- 						/>         	
+ 						/> 
 					)}
 
         </div>
       )
     } else {
       return <p className="text-center">Cargando empleados...</p>
-    }
+    }	
   }
 }
 

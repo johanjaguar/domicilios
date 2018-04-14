@@ -38,6 +38,8 @@ class App extends React.Component {
 								text={post.text}
 								photo={post.user.image}
 								reactions={post.reactions}
+								comments={post.comments}
+								type={"post"}
 							/> 
 						)}
 					</div>

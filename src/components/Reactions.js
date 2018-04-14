@@ -11,8 +11,6 @@ class Reactions extends React.Component {
 	} 
 	
 	componentWillMount() {
-		console.log(this.props.reactions)
-		console.log(typeof(this.props.reactions))
 		if(this.props.reactions.length > 0) {
 			this.setState({
 				reactions: this.props.reactions,

@@ -1,8 +1,7 @@
 import React from "react";
 import ProfilePhoto from "./ProfilePhoto.js";
-//import DatesUntil from "./DatesUntil.js";
 import { getDays } from "../lib/Util.js";  
-
+import "../scss/components/Post.scss";
 class Post extends React.Component {  
 	constructor( props ){
 		super( props )
@@ -11,7 +10,7 @@ class Post extends React.Component {
 
 				text: undefined,
 			}
-	}
+	} 
  
 	componentWillMount() {
 

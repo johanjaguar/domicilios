@@ -1,6 +1,7 @@
 import React from "react";
 import defaultPhoto from "../assets/images/mrx.png";  
-
+import "../scss/components/ProfilePhoto.scss";
+ 
 class ProfilePhoto extends React.Component {
 	constructor( props ) {
 		super( props )

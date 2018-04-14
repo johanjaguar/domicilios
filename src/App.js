@@ -1,6 +1,6 @@
 import React from 'react';
 import Post from "./components/Post.js";
-
+import "./scss/App.scss";
 class App extends React.Component {
 	constructor(props) {
 		super(props)
@@ -29,17 +29,19 @@ class App extends React.Component {
  
     if (this.state.posts.length > 0) {
       return (
-        <div className="posts__box">
- 
-          {this.state.posts.map((post, index) =>
- 						<Post 
- 							username={post.user.name} 
- 							date={post.date} 
- 							text={post.text}
- 							photo={post.user.image}
- 						/> 
-					)}
-
+        <div className="domicilios">
+ 					<div class="container">
+						{this.state.posts.map((post, index) =>
+							<Post 
+								username={post.user.name} 
+								date={post.date} 
+								text={post.text}
+								photo={post.user.image}
+							/> 
+						)}
+	
+ 					</div>
+          
         </div>
       )
     } else {

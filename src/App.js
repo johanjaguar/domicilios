@@ -16,7 +16,7 @@ class App extends React.Component {
         return response.json()
       })
       .then((data) => {
-      	console.log(data)
+				console.log(data)
         this.setState({
 					posts: data,
 					error: ""
@@ -30,17 +30,17 @@ class App extends React.Component {
     if (this.state.posts.length > 0) {
       return (
         <div className="domicilios">
- 					<div class="container">
+					<div className="container">
 						{this.state.posts.map((post, index) =>
 							<Post 
 								username={post.user.name} 
 								date={post.date} 
 								text={post.text}
 								photo={post.user.image}
+								reactions={post.reactions}
 							/> 
 						)}
-	
- 					</div>
+					</div>
           
         </div>
       )

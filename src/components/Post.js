@@ -1,7 +1,9 @@
 import React from "react";
 import ProfilePhoto from "./ProfilePhoto.js";
+import Reactions from "./Reactions.js";
+//import DatesUntil from "./DatesUntil.js";
 import { getDays } from "../lib/Util.js";  
-import "../scss/components/Post.scss";
+
 class Post extends React.Component {  
 	constructor( props ){
 		super( props )
@@ -10,7 +12,7 @@ class Post extends React.Component {
 
 				text: undefined,
 			}
-	} 
+	}
  
 	componentWillMount() {
 
@@ -30,6 +32,10 @@ class Post extends React.Component {
 				<p className="post__username">{this.state.username}</p>
 				{getDays(this.props.date)}
 				<p className="post__text">{this.state.text}</p> 
+				
+				<Reactions 
+					reactions={this.props.reactions}
+				/>
 			</div> 
 		)
 	}

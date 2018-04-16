@@ -20,8 +20,9 @@ class Post extends React.Component {
 				untilNumber: undefined,
 				reactions: undefined,
 				comments: undefined,
-				type: undefined
-			}
+				type: undefined, 
+				numberComments: undefined
+			} 
 	}
  
 	componentWillMount() {
@@ -33,7 +34,8 @@ class Post extends React.Component {
 			untilNumber: getDays(this.props.date)[1],
 			reactions: this.props.reactions,
 			comments: this.props.comments,
-			type: this.props.type
+			type: this.props.type,
+			numberComments: this.props.comments.length
 		}) 
 	} 
 	render() {
@@ -54,9 +56,15 @@ class Post extends React.Component {
 							<p className="post__text">{this.state.text}</p>
 						</div>
 					</div>
-					<Reactions 
-						reactions={this.state.reactions}
-					/>
+					<div class="post__2">
+						<Reactions 
+							reactions={this.state.reactions}
+						/>
+						<div class="comments__number">
+							{this.state.numberComments + " comentario" + ((this.state.numberComments !== 1)? "s":"")}
+						</div>
+					</div>
+					
 
 					<Comments
 						comments={this.state.comments	} />	

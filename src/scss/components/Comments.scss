@@ -2,6 +2,16 @@
 
 .comments {
 	background: gray;
+	
+	&__number {
+		color: $color-texto;
+		line-height: normal;
+		font-size: 12px;
+		letter-spacing: -0.00857143px;
+		margin: 10px 20px;
+		mix-blend-mode: normal;
+		opacity: 0.54;
+	}
 }
 
 .comment {

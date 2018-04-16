@@ -20,6 +20,13 @@
     justify-content: space-around;
 	}
 	
+	&__2 {
+		display: flex;
+    flex-direction: row;
+		flex-wrap: nowrap;
+    justify-content: space-between;
+	}
+	
 	&__until {
 		margin: 0;
 	}

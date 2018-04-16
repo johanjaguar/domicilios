@@ -1,0 +1,17 @@
+@import '../common/variables.scss';
+
+.reactions {
+	align-items: center;
+	display: flex;
+	justify-content: flex-start;
+    
+	&__img {
+		margin: 10px 10px 10px 20px;
+	}
+	
+	&__total {
+		color: $color-titulos;
+		font-size: 14px;
+		font-weight: bold;
+	}
+}

@@ -1,5 +1,6 @@
 import React from "react";
-import defaultPhoto from "../assets/images/mrx.png";  
+import defaultPhoto from "../assets/images/fill.png";  
+import "../scss/common/general.scss";
 import "../scss/components/ProfilePhoto.scss";
  
 class ProfilePhoto extends React.Component {
@@ -26,7 +27,7 @@ class ProfilePhoto extends React.Component {
 	render() { 
 		return ( 
 			<div className="photo">
-				<img src={this.state.url} alt={this.state.alt} /> 
+				<img className="img-responsive" src={this.state.url} alt={this.state.alt} /> 
 			</div>
 		)
 	}

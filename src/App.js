@@ -1,6 +1,8 @@
 import React from 'react';
 import Post from "./components/Post.js";
 import "./scss/App.scss";
+import "./scss/common/general.scss";
+ 
 class App extends React.Component {
 	constructor(props) {
 		super(props)

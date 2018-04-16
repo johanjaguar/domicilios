@@ -2,8 +2,12 @@ import React from "react";
 import ProfilePhoto from "./ProfilePhoto.js";
 import Reactions from "./Reactions.js";
 import Comments from "./Comments.js";
-//import DatesUntil from "./DatesUntil.js";
+
 import { getDays } from "../lib/Util.js";  
+
+import "../scss/common/general.scss";
+import "../scss/components/Post.scss";
+
 
 class Post extends React.Component {  
 	constructor( props ){
@@ -36,18 +40,20 @@ class Post extends React.Component {
 		if( this.state.type === "post" ) {
 			return (
 				<div className="post">
-					<ProfilePhoto 
-						photo={this.state.photo}
-						alt={this.state.username}
-					/> 
+					<div className="post__1">
+						<ProfilePhoto 
+							photo={this.state.photo}
+							alt={this.state.username}
+						/> 
+						<div className="post__info">
+							<h3 className={this.state.type + `__username`}>{this.state.username}</h3>
+							<h4 className="post__until until">
+								Hace <span className="until__number">{this.state.untilNumber}</span> <span className="until__name">{this.state.untilName}</span> 
+							</h4>
 
-					<p className="post__username">{this.state.username}</p>
-					<p className="post__until until">
-						Hace <span className="until__number">{this.state.untilNumber}</span> <span className="until__name">{this.state.untilName}</span> 
-					</p>
-
-					<p className="post__text">{this.state.text}</p> 
-
+							<p className="post__text">{this.state.text}</p>
+						</div>
+					</div>
 					<Reactions 
 						reactions={this.state.reactions}
 					/>
@@ -64,13 +70,18 @@ class Post extends React.Component {
 						photo={this.state.photo}
 						alt={this.state.username}
 					/> 
+					<div className="comment__info">
+						<h3 className="comment__username">{this.state.username}</h3>
 
-					<p className="comment__username">{this.state.username}</p>
-					<p className="comment__until until">
-						Hace <span className="until__number">{this.state.untilNumber}</span> <span className="until__name">{this.state.untilName}</span> 
-					</p>
+						<p className="comment__text">{this.state.text}</p> 
 
-					<p className="comment__text">{this.state.text}</p> 
+						<h4 className="comment__until until">
+							Hace <span className="until__number">{this.state.untilNumber}</span> <span className="until__name">{this.state.untilName}</span> 
+						</h4>
+					</div>
+	
+					
+
 				</div> 
 			)	
 		}

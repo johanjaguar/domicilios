@@ -1,3 +1,15 @@
+@import '../common/variables.scss';
+
 .photo {
-	background: lime;
+	align-items: flex-start;
+	display: flex;
+	flex-wrap: nowrap;  
+	float: left;
+	justify-content: center;
+	margin: 10px;
+	width: 15%;
+	
+	img {
+		border: 1px dashed $border-color;
+	}
 }

@@ -1,0 +1,36 @@
+@import 'variables.scss';
+
+body {
+	background: $fondo-app;
+	font-family: Helvetica, Arial, sans-serif;
+}
+ 
+h1, h2, h3 {
+	color: $color-titulos;
+	font-weight: bold;
+}
+
+h3 {
+	font-size: 14px;
+	line-height: 16px;
+}
+
+h4 {
+	color: $color-texto;
+	font-size: 10px;
+	letter-spacing: -0.00833333px;
+	mix-blend-mode: normal;
+	opacity: 0.38;
+}
+
+p {
+	color: $color-texto;
+	font-size: 14px;
+	line-height: 16px; 
+}
+
+
+.img-responsive {
+	height: auto;
+	max-width: 100%;
+}

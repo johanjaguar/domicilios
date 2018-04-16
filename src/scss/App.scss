@@ -1,7 +1,9 @@
+@import 'common/variables.scss';
+
 .container {
 	margin: 0 auto;
 }
 
 .domicilios {
-	background: cyan;	
+	background: $fondo-app;
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import reactions from "../assets/images/reactions.png";  
 import "../scss/components/Reactions.scss";
  
 class Reactions extends React.Component {
@@ -6,33 +7,39 @@ class Reactions extends React.Component {
 		super( props )
 			this.state = {
 				reactions: [],
-				error: undefined
+				error: undefined,
+				total: undefined
 			}
 	} 
 	
 	componentWillMount() {
 		if(this.props.reactions.length > 0) {
+			let totalReactions = 0;
+			this.props.reactions.map((reaction) => { 
+				 totalReactions = totalReactions + reaction.number
+			});
+			
 			this.setState({
 				reactions: this.props.reactions,
-				error: ""
+				error: "",
+				total: totalReactions
 			})	
 		}
 		else {
 			this.setState({
 				reactions: [],
-				error: "No have reactions"
+				error: "No have reactions",
+				total: undefined
 			})	
 		}
-		
 	}
 	render() { 
-		
 		return ( 
 			<div className="reactions">
-				{this.state.reactions.map((reaction, index) =>
-					<div className={`reaction reaction-${reaction.name}`}>
-					{reaction.number}</div>					
-				)}
+				<img className="reactions__img" src={reactions} /> 
+				<div className="reactions__total">
+					{this.state.total}
+				</div>
 			</div>
 		)
 	}

@@ -1,3 +1,30 @@
+@import '../common/variables.scss';
+
 .post {
-	background: red;
+	background: $fondo-post;
+	border: 1px solid $border-color;
+	box-shadow: 2px 2px 2px rgba(0,0,0,0.12);
+	margin: 15px;
+	
+	
+	&__info {
+		padding: 0 15px 0 5px;
+		width: 85%;
+	}
+	
+	&__1 {
+		border-bottom: 1px solid $border-color;
+		display: flex;
+    flex-direction: row;
+		flex-wrap: nowrap;
+    justify-content: space-around;
+	}
+	
+	&__until {
+		margin: 0;
+	}
+	
+	&__username {
+		margin: 10px 0 5px 0;
+	}
 } 
